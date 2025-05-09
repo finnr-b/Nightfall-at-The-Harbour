@@ -68,6 +68,7 @@ public class ProjectileGun : MonoBehaviour
 
         // The player shoots
         if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+            if (!PauseMenu.isPaused)
         {
             // This sets the bullets shot to 0
             bulletsShot = 0;

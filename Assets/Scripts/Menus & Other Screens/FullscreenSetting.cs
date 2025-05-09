@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FullscreenSetting : MonoBehaviour
 {
-    public void SetFullscreen (bool isFullscreen)
+    public void ToggleFullscreen()
     {
-        Screen.fullScreen = isFullscreen;
+        Screen.fullScreen = !Screen.fullScreen;
         Debug.Log("Player has hit the toggle");
     }
 }
