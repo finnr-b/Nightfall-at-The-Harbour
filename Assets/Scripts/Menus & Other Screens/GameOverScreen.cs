@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
+    private void OnEnable()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
     // Let's try that again.
     public void RestartingGame()
     {

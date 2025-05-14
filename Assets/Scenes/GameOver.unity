@@ -607,7 +607,7 @@ RectTransform:
   m_GameObject: {fileID: 1007339360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.530173, y: 1.62151, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 878202308}
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 1218610552}
   - component: {fileID: 1218610551}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Game Over Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -929,7 +929,7 @@ RectTransform:
   m_GameObject: {fileID: 1499314146}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5301734, y: 1.62151, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 259904364}
@@ -1196,7 +1196,7 @@ RectTransform:
   m_GameObject: {fileID: 1588468837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.530173, y: 1.62151, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1570940652}

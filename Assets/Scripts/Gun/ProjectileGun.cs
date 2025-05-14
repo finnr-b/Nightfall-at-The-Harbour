@@ -7,11 +7,8 @@ using JetBrains.Annotations;
 
 public class ProjectileGun : MonoBehaviour
 {
-    // The Bullet
     public GameObject bullet;
-
-    // The Bullet Force
-    public float shootForce, upwardForce;
+    public float shootForce;
 
     // Some Gun Stats
     public float timeBetweenShooting, spread, reloadTime, timeBetweenShots;
@@ -149,6 +146,7 @@ public class ProjectileGun : MonoBehaviour
         readyToShoot = true;
         allowInvoke = true;
     }
+
 
     private void Reload()
     {

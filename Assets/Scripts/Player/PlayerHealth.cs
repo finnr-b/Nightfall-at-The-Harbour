@@ -3,18 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth = 100f;
     public float currentHealth;
 
-    public Image healthBarFill;
+    public TextMeshProUGUI healthTextDisplay;
+
+    public float debugDamageAmount = 10f;
+    public KeyCode debugDamageKey = KeyCode.F;
 
     void Start()
     {
         currentHealth = maxHealth;
         UpdateHealthUI(); // Initialize health bar
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+        if (Input.GetKeyDown(debugDamageKey))
+        {
+            TakeDamage(debugDamageAmount);
+        }
     }
 
     public void TakeDamage(float amount)
@@ -33,9 +46,9 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthUI()
     {
-        if (healthBarFill != null)
+        if (healthTextDisplay != null)
         {
-            healthBarFill.fillAmount = currentHealth / maxHealth;
+            healthTextDisplay.text = "HP: " + Mathf.RoundToInt(currentHealth).ToString() + " / " + Mathf.RoundToInt(maxHealth).ToString();
         }
     }
 

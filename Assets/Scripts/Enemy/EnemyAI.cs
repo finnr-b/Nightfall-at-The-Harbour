@@ -68,7 +68,6 @@ public class EnemyAI : MonoBehaviour
         walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
         // This part makes sure the enemy does not wander out of bounds.
-
         if (Physics.Raycast(walkPoint, -transform.up, 2f, whatIsGround))
             walkPointSet = true;
     }
@@ -81,7 +80,6 @@ public class EnemyAI : MonoBehaviour
     private void AttackPlayer()
     {
         // This part makes sure the enemy doesn't move for difficulty sake
-
         agent.SetDestination(transform.position);
 
         transform.LookAt(player);

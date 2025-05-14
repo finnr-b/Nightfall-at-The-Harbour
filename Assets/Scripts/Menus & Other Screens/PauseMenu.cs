@@ -6,12 +6,16 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
 	public GameObject pauseMenu;
+	public GameObject ammoCount;
+	public GameObject playerHealth;
 	public static bool isPaused;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		pauseMenu.SetActive(false);
+		ammoCount.SetActive(true);
+		playerHealth.SetActive(true);
 	}
 
 	// Update is called once per frame
@@ -34,6 +38,8 @@ public class PauseMenu : MonoBehaviour
 	public void PauseGame()
 	{
 		pauseMenu.SetActive(true);
+		ammoCount.SetActive(false);
+		playerHealth.SetActive(false);
 		Time.timeScale = 0f;
 		isPaused = true;
         Cursor.visible = true;
@@ -44,12 +50,20 @@ public class PauseMenu : MonoBehaviour
 	public void ResumeGame()
 	{
 		pauseMenu.SetActive(false);
+		ammoCount.SetActive(true);
+		playerHealth.SetActive(true);
 		Time.timeScale = 1f;
 		isPaused = false;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+	// Let me try that differently
+	public void RestartLevel()
+    {
+		Time.timeScale = 1f;
+		SceneManager.LoadScene("MainGame");
+    }
 	// Ragequit
 	public void GoToMainMenu()
 	{
